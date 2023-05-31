@@ -65,6 +65,13 @@
       <input id="text3" name="tgl_lahir" type="date" class="form-control">
     </div>
   </div>
+  <!-- penambahan kekayaan -->
+  <div class="form-group row">
+    <label for="text3" class="col-4 col-form-label">Kekayaan</label> 
+    <div class="col-8">
+      <input id="text3" name="kekayaan" type="text" class="form-control" placeholder="Masukan Kekayaan">
+    </div>
+  </div>
   <div class="form-group row">
     <label for="textarea" class="col-4 col-form-label">Alamat</label> 
     <div class="col-8">

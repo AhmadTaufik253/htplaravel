@@ -67,6 +67,12 @@
     </div>
   </div>
   <div class="form-group row">
+    <label for="text3" class="col-4 col-form-label">Kekayaan</label> 
+    <div class="col-8">
+      <input id="text3" name="kekayaan" type="text" class="form-control" value="{{$p->kekayaan}}">
+    </div>
+  </div>
+  <div class="form-group row">
     <label for="textarea" class="col-4 col-form-label">Alamat</label> 
     <div class="col-8">
       <textarea id="textarea" name="alamat" cols="40" rows="5" class="form-control">{{$p->alamat}}</textarea>

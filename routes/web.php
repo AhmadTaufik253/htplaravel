@@ -64,6 +64,11 @@ Route::get('/divisi/delete/{id}', [DivisiController::class, 'destroy']);
 
 //ini adalah routing untuk jabatan
 Route::get('/jabatan', [JabatanController::class, 'index']);
+Route::get('/jabatan/create', [JabatanController::class, 'create']);
+Route::post('/jabatan/store', [JabatanController::class, 'store']);
+Route::get('/jabatan/edit/{id}', [JabatanController::class, 'edit']);
+Route::post('/jabatan/update', [JabatanController::class, 'update']);
+Route::get('/jabatan/delete/{id}', [JabatanController::class, 'destroy']);
 
 //ini adalah routing untuk dashboard
 

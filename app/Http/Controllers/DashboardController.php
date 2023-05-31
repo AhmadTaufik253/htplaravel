@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Pegawai;
+use App\Models\Jabatan;
+use App\Models\Divisi;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -12,8 +15,15 @@ class DashboardController extends Controller
      */
     public function index()
     {       
-
-         return view('admin.dashboard');
+        $pegawai = Pegawai::count();
+        $jabatan = Jabatan::count();
+        $divisi = Divisi::count();
+        $ar_kekayaan = DB::table('pegawai')->select('nama', 'kekayaan')->get();
+        $ar_gender = DB::table('pegawai')
+        ->selectRaw('gender, count(gender) as jumlah')
+        ->groupBy('gender')
+        ->get();
+         return view('admin.dashboard', compact('pegawai','jabatan','divisi','ar_kekayaan','ar_gender'));
     }
 
     /**
